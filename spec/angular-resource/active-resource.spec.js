@@ -1320,15 +1320,6 @@ describe('ActiveResource', function() {
                       {id: 9, placement: 'window', name: 'Matts System'},
                       {id: 10, placement: 'window', name: 'Pickles System'}]);
 
-          backend.when('GET', 'http://api.faculty.com/sensors?system_id=8')
-            .respond([]);
-
-          backend.when('GET', 'http://api.faculty.com/sensors?system_id=9')
-            .respond([]);
-
-          backend.when('GET', 'http://api.faculty.com/sensors?system_id=10')
-            .respond([]);
-
           backend.flush();
           expect(System.cached[8]).toBe(system8);
         });

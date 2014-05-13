@@ -1681,7 +1681,7 @@ angular.module('ActiveResource').provider('ARBase', function () {
             throw 'Argument to where must be an object';
           if (!options)
             options = {
-              lazy: false,
+              lazy: true,
               overEager: false,
               api: true
             };
